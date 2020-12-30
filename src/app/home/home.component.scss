@@ -1,0 +1,16 @@
+@import '~@nativescript/theme/scss/variables/grey';
+
+// Custom styles
+.breed-list,
+:host-context(.ns-dark) .breed-list {
+    &__item {
+        @include colorize($background-color: white);
+
+        &-content {
+            @include colorize($background-color: transparent);
+            padding: 10 5 10 5;
+            font-size: 18;
+            color: black;
+        }
+    }
+}

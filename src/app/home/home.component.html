@@ -1,0 +1,13 @@
+<ActionBar  title="Dog Breed List">
+</ActionBar>
+
+<GridLayout>
+    <ListView [items]="breedlist" class="breed-list" separatorColor="white">
+        <ng-template let-item="item">
+            <FlexboxLayout flexDirection="row" class="breed-list__item" (Tap)="onBreedTap(item)">
+                <Label [text]="item |titlecase" class="breed-list__item-content"></Label>
+            </FlexboxLayout>
+        </ng-template>
+    </ListView>
+    <ActivityIndicator [busy]="isLoading"></ActivityIndicator>
+</GridLayout>
